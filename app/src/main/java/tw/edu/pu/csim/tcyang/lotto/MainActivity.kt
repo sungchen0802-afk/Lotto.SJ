@@ -62,7 +62,7 @@ fun Play(modifier: Modifier = Modifier) {
             text = "樂透數字(1-100)為 $lucky, 由宋媫製作"
         )
         Text("宋佳勳共同編輯程式")
-
+        Text("鍾若筠共同編輯程式")
         Button(
             onClick = { lucky = (1..100).random() }
         ) {
