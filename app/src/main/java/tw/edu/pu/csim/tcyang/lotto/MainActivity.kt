@@ -44,23 +44,22 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Play(modifier: Modifier = Modifier) {
-    //var lucky = (1..100).random()
     var lucky by remember {
         mutableStateOf((1..100).random())
     }
 
     val context = LocalContext.current // 取得當前 Context
 
-    Column (modifier = modifier
+    Column(modifier = modifier
         .fillMaxSize()
         .clickable {
-            Toast.makeText(context, "螢幕觸控(楊子青)", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "螢幕觸控(宋媫)", Toast.LENGTH_SHORT).show()
         },
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
-        ){
+    ) {
         Text(
-            text = "樂透數字(1-100)為 $lucky"
+            text = "樂透數字(1-100)為 $lucky, 由宋媫製作"
         )
 
         Button(
@@ -69,7 +68,5 @@ fun Play(modifier: Modifier = Modifier) {
             Text("重新產生樂透碼")
         }
     }
-
-
-
 }
+
